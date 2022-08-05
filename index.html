@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="img/bgBankai.jpg" class="banner" />
+      <a href="#" class="logo">Bankai</a>
+
+      <div class="toggle"></div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <aside>
+        <h2>Venha colaborar em um espaço, no qual todos se ajudam!</h2>
+        <br />
+        <br />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste deserunt
+          aliquid perferendis dicta soluta ducimus cum, quis minus voluptatibus
+          quas animi non, rerum officiis! Voluptatibus est dolor vel veritatis
+          expedita.lorem lorem Lorem Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Iste deserunt aliquid perferendis dicta soluta
+          ducimus cum, quis minus voluptatibus quas animi non, rerum officiis!
+          Voluptatibus est dolor vel veritatis expedita.lorem lorem LoremLorem
+          ipsum dolor sit amet consectetur adipisicing elit. Iste deserunt
+          aliquid perferendis dicta soluta ducimus cum, quis minus voluptatibus
+          quas animi non, rerum officiis! Voluptatibus est dolor vel veritatis
+          expedita.lorem lorem Lorem Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Iste deserunt aliquid perferendis dicta soluta
+          ducimus cum, quis minus voluptatibus quas animi non, rerum officiis!
+          Voluptatibus est dolor vel veritatis expedita.lorem lorem Lorem<br /><br />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste deserunt
+          aliquid perferendis dicta soluta ducimus cum, quis minus voluptatibus
+          quas animi non, rerum officiis! Voluptatibus est dolor vel veritatis
+          expedita.lorem lorem Lorem Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Iste deserunt aliquid perferendis dicta soluta
+          ducimus cum, quis minus voluptatibus quas animi non, rerum officiis!
+          Voluptatibus est dolor vel veritatis expedita.lorem lorem LoremLorem
+          ipsum dolor sit amet consectetur adipisicing elit. Iste deserunt
+          aliquid
+        </p>
+      </aside>
+      <article>
+        <div class="bannerArme"></div>
+        >
+      </article>
+    </section>
+
+    <script>
+      window.addEventListener('scroll', function () {
+        const header = document.querySelector('header')
+        header.classList.toggle('sticky', window.scrollY > 0)
+      })
+
+      const navigation = document.querySelector('nav')
+      document.querySelector('.toggle').onclick = function () {
+        this.classList.toggle('active')
+        navigation.classList.toggle('active')
+      }
+    </script>
+  </body>
+</html>
