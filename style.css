@@ -9,7 +9,7 @@
   font-family: 'Press Start 2P', sans-serif;
 }
 body {
-  min-height: 1000px;
+  min-height: 100vh;
 }
 header {
   position: fixed;
@@ -104,34 +104,164 @@ nav ul li a {
 nav ul li a:hover {
   color: #ff275f;
 }
+
 section {
   display: flex;
-  margin-top: 45vh;
+  margin-top: 40vh;
+  margin-left: 3vh;
   padding: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50vh 50vh;
+  grid-template-areas: 'aside aarticle' 'footer footer';
+  grid-row-gap: 20px;
+}
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+footer .card {
+  position: relative;
+  width: 600px;
+  height: 350px;
+  margin: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 20px;
+  background-size: 200% 200%;
+  /* fallback for old browsers */
+  background-image: linear-gradient(
+    90deg,
+    rgba(28, 0, 1, 1) 0%,
+    rgba(121, 9, 43, 1) 35%,
+    rgba(255, 39, 95, 1) 100%
+  ); /* W3C 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  animation: color 15s ease infinite;
 }
 
+@keyframes color {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+footer .card img {
+  position: absolute;
+  bottom: 0;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 400px;
+  transition: 0.5s;
+}
+
+footer .card p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+footer .card a {
+  text-decoration: none;
+  color: #7289da;
+}
+.card:hover img {
+  z-index: 10;
+  left: 80%;
+  height: 500px;
+}
+.card span {
+  color: #ff275f;
+}
+.card .conteudo {
+  position: relative;
+  width: 50%;
+  left: 20%;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  padding: 20px 20px 20px 40px;
+}
+footer .card:hover .conteudo {
+  opacity: 1;
+  visibility: visible;
+  left: 0%;
+}
 section aside h2 {
-  font-size: 3rem;
+  width: 500px;
+  font-size: 2rem;
 }
-
+section aside span {
+  color: #ff275f;
+}
+section aside {
+  margin-left: 12vw;
+}
 section aside p {
+  width: 500px;
+
   font-size: 1.2rem;
   font-family: 'Poppins', sans-serif;
 }
 
 section article .bannerArme {
-  width: 700px;
-  height: 380px;
-  background-size: 200px;
+  width: 580px;
+  height: 420px;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 10px;
-  background: url('img/bgArme.png');
-  z-index: 15;
-  object-fit: cover;
+  background-size: 100%;
+
+  background: url('img/bgBankai-removebg-preview.png');
+  background-position: center;
   transition: 1s;
 }
 
+.rodape {
+  color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(28, 0, 1, 1) 0%,
+    rgba(121, 9, 43, 1) 35%,
+    rgba(255, 39, 95, 1) 100%
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.rodape .card img {
+  position: absolute;
+  bottom: 0;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 400px;
+  transition: 0.5s;
+}
+.rodape .card .conteudo {
+  position: relative;
+  width: 50%;
+  left: 20%;
+  transition: 0.5s;
+  opacity: 1;
+  visibility: visible;
+  padding: 20px 20px 20px 40px;
+}
 @media (max-width: 991px) {
   section,
   header {
