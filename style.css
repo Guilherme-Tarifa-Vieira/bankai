@@ -8,9 +8,13 @@
   box-sizing: border-box;
   font-family: 'Press Start 2P', sans-serif;
 }
+
 body {
   min-height: 100vh;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
+
 header {
   position: fixed;
   top: 0;
@@ -43,12 +47,11 @@ header .banner {
   height: 100%;
   object-fit: cover;
   transition: 1s;
-  background-image: linear-gradient(
-    90deg,
-    #a01212 0%,
-    #d2122e 35%,
-    #c60c30 100%
-  ); /* W3C 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: linear-gradient(90deg,
+      #a01212 0%,
+      #d2122e 35%,
+      #c60c30 100%);
+  /* W3C 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   animation: color 15s ease infinite;
 }
@@ -79,6 +82,7 @@ nav {
   display: flex;
   z-index: 1;
 }
+
 nav ul {
   position: relative;
   display: flex;
@@ -95,8 +99,6 @@ header.sticky nav ul {
   visibility: visible;
 }
 
-header.sticky nav ul {
-}
 
 nav ul li {
   list-style: none;
@@ -114,37 +116,24 @@ nav ul li a:hover {
   color: #ff275f;
 }
 
-section {
-  margin-top: 40vh;
-  margin-left: 3vh;
-  padding: 100px;
-  display: grid;
 
-  grid-template-rows: 50vh 8vh 45vh;
-  grid-template-areas: 'aside article' 'time time' 'footer segundo';
-  grid-row-gap: 20px;
-}
-footer {
-  grid-area: footer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
-}
 
 .time {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  grid-area: time;
+  flex-direction: column;
 }
+
 
 .time h2 {
   font-size: 2rem;
 }
-footer .card {
+
+.time h2 span {
+  color: #ff275f;
+
+}
+
+section .card {
   z-index: 0.5;
-  position: relative;
   width: 600px;
   height: 350px;
   margin: 20px;
@@ -154,12 +143,11 @@ footer .card {
   border-radius: 20px;
   background-size: 200% 200%;
   /* fallback for old browsers */
-  background-image: linear-gradient(
-    90deg,
-    #a01212 0%,
-    #d2122e 35%,
-    #c60c30 100%
-  ); /* W3C 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: linear-gradient(90deg,
+      #a01212 0%,
+      #d2122e 35%,
+      #c60c30 100%);
+  /* W3C 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   animation: color 15s ease infinite;
   transition: 1s;
@@ -169,15 +157,17 @@ footer .card {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
 }
 
-footer .card img {
+section .card img {
   position: absolute;
   bottom: 0;
   top: -10px;
@@ -187,12 +177,13 @@ footer .card img {
   transition: 0.5s;
 }
 
-footer .card p {
+section .card p {
   margin-top: 10px;
   margin-bottom: 10px;
   color: #fff;
 }
-footer .card a {
+
+section .card a {
   text-decoration: none;
   color: #7289da;
 }
@@ -202,9 +193,11 @@ footer .card a {
   left: 80%;
   height: 500px;
 }
+
 .card span {
   color: #ff275f;
 }
+
 .card .conteudo {
   position: relative;
   width: 50%;
@@ -214,39 +207,16 @@ footer .card a {
   visibility: hidden;
   padding: 20px 20px 20px 40px;
 }
-footer .card:hover .conteudo {
+
+section .card:hover .conteudo {
   opacity: 1;
   visibility: visible;
   left: 0%;
 }
-section aside h2 {
-  width: 550px;
-  font-size: 2rem;
-}
-section aside span {
-  color: #ff275f;
-}
-section aside {
-  margin-left: 12vw;
-}
-section aside p {
-  width: 500px;
 
-  font-size: 1.2rem;
-  font-family: 'Poppins', sans-serif;
-}
 
-section article .bannerArme {
-  width: 580px;
-  height: 420px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
 
-  background: url('img/bgBankai-removebg-preview.png');
-  background-position: center;
-  transition: 1s;
-}
+
 
 .rodape {
   color: #fff;
@@ -254,16 +224,16 @@ section article .bannerArme {
   display: flex;
   justify-content: center;
   align-items: center;
+
   margin: 0 auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background: linear-gradient(
-    90deg,
-    #a01212 0%,
-    #d2122e 35%,
-    #c60c30 100%
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(90deg,
+      #a01212 0%,
+      #d2122e 35%,
+      #c60c30 100%);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .rodape .card img {
@@ -275,6 +245,7 @@ section article .bannerArme {
   height: 400px;
   transition: 0.5s;
 }
+
 .rodape .card .conteudo {
   position: relative;
   width: 50%;
@@ -289,11 +260,14 @@ section article .bannerArme {
   color: #7289da;
   text-decoration: none;
 }
+
 .rodape .card .conteudo ion-icon {
   height: 50px;
   width: 50px;
 }
+
 @media (max-width: 991px) {
+
   section,
   header {
     padding: 40px;
@@ -316,6 +290,7 @@ section article .bannerArme {
     opacity: 0;
     visibility: hidden;
   }
+
   nav.active ul {
     position: fixed;
     top: 80px;
@@ -337,6 +312,7 @@ section article .bannerArme {
   nav ul li a {
     font-size: 2rem;
   }
+
   header.sticky .toggle {
     position: fixed;
     top: 15px;
@@ -358,103 +334,16 @@ section article .bannerArme {
   }
 }
 
-@media screen and (max-width: 1550px) {
-  body {
-    overflow-x: hidden;
-  }
-  section {
-    margin-left: 0;
-  }
-}
 
-@media screen and (max-width: 1420px) {
-  body {
-    overflow-x: hidden;
-  }
-  section {
-    margin-left: 0;
-    grid-row-gap: 0;
-  }
 
-  section aside {
-    margin: 0;
-  }
-  section article {
-    margin-left: 80px;
-  }
-  section .card {
-    margin-left: 0;
-  }
-}
 
-@media screen and (max-width: 1330px) {
-  section {
-    grid-template-areas: 'aside article' 'time time' 'footer footer' 'segundo segundo';
-  }
 
-  .time {
-    position: relative;
-    left: -55px;
-  }
-  footer {
-    margin-top: 80px;
-    padding-left: 200px;
-  }
-  section .segundo {
-    display: flex;
-    justify-content: flex-start;
-    grid-area: segundo;
-  }
 
-  section .segundo .card .conteudo {
-    flex-direction: column;
-  }
 
-  section .card .conteudo {
-    flex-direction: column;
-  }
 
-  section footer {
-    padding-left: 0;
-  }
-}
 
-@media screen and (max-width: 1220px) {
-  section {
-    grid-template-areas: 'aside aside' 'article article' 'time time' 'footer footer' 'segundo segundo';
-  }
 
-  section article {
-    grid-area: article;
-  }
-}
 
-@media screen and (max-width: 768px) {
-  section {
-    display: flex;
-    flex-direction: column;
-  }
-
-  footer {
-    display: flex;
-    flex-direction: column;
-  }
-
-  section aside {
-    margin-left: 25px;
-  }
-
-  section article {
-    margin-top: 35px;
-  }
-
-  .time {
-    position: relative;
-    top: 50px;
-  }
-}
-@media screen and (max-width: 500px) {
-}
 
 div .card img {
   position: absolute;
@@ -471,6 +360,7 @@ div .card p {
   margin-bottom: 10px;
   color: #fff;
 }
+
 div .card a {
   text-decoration: none;
   color: #7289da;
@@ -481,9 +371,11 @@ div .card:hover img {
   left: 80%;
   height: 500px;
 }
+
 div .card span {
   color: #ff275f;
 }
+
 div .card .conteudo {
   position: relative;
   width: 50%;
@@ -494,11 +386,13 @@ div .card .conteudo {
   padding: 20px 20px 20px 40px;
   flex-direction: column;
 }
+
 div .card:hover .conteudo {
   opacity: 1;
   visibility: visible;
   left: 0%;
 }
+
 div .card {
   z-index: 0.5;
   position: relative;
@@ -511,20 +405,89 @@ div .card {
   border-radius: 20px;
   background-size: 200% 200%;
   /* fallback for old browsers */
-  background-image: linear-gradient(
-    90deg,
-    #a01212 0%,
-    #d2122e 35%,
-    #c60c30 100%
-  ); /* W3C 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: linear-gradient(90deg,
+      #a01212 0%,
+      #d2122e 35%,
+      #c60c30 100%);
+  /* W3C 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   animation: color 15s ease infinite;
   transition: 1s;
 }
+
 section div {
-  grid-area: segundo;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 90px;
+  margin-top: 130px;
 }
+
+
+section .content-man {
+  flex-direction: column;
+  width: 80%;
+  gap: 1rem;
+}
+
+section .content-man span {
+  color: #ff275f;
+}
+
+
+.swip-sec {
+  height: 100%;
+  width: 100%;
+}
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SWIPER2*/
+
+/* .swiper2 {
+  width: 240px;
+  height: 320px;
+  background-color: #4717f6;
+}
+
+.swiper-slide2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+} */

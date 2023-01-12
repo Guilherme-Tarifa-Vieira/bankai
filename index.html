@@ -1,113 +1,189 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="banner"></div>
-      <a href="#" class="logo">Bankai</a>
 
-      <div class="toggle"></div>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-          <li><a href="#">Time</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
-      </nav>
-    </header>
-    <div class="container">
-      <section>
-        <aside>
-          <h2><span>P</span>articipe da nossa Guilda e tenha benefícios!</h2>
-          <br />
-          <br />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
-            deserunt aliquid perferendis dicta soluta ducimus cum, quis minus
-            voluptatibus quas animi non, rerum officiis! Voluptatibus est dolor
-            vel veritatis expedita.lorem lorem Lorem Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Iste deserunt aliquid perferendis di
-          </p>
-        </aside>
-        <article>
-          <div class="bannerArme"></div>
-        </article>
-        <div class="time"><h2>Nosso time</h2></div>
-        <footer>
-          <div class="card">
-            <div class="conteudo">
-              <h2><span>S</span>ellion</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum
-              </p>
-              <a href="#">SonetoMagico#7578</a>
-            </div>
-            <img src="img/articleRonan.png" />
-          </div>
-        </footer>
-        <div class="segundo">
-          <div class="card">
-            <div class="conteudo" id="segundo">
-              <h2><span>K</span>ingOfHell</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum
-              </p>
-              <a href="#">Tarifa#0625</a>
-            </div>
-            <img src="img/bgDisc-removebg-preview.png" />
-          </div>
+</head>
+
+<body>
+  <header>
+    <div class="banner"></div>
+    <a href="#" class="logo">Bankai</a>
+
+    <div class="toggle"></div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+
+        <li><a href="#">Time</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="swip-sec">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="img/imgA01.webp" />
         </div>
-      </section>
-      <section class="rodape">
-        <div class="contato">
-          <div class="card">
-            <div class="conteudo">
-              <h2><span>E</span>ntre no Discord!</h2>
-              <br />
-              <br />
-              <p>Clique no ícone e acesso convite agora mesmo.</p>
-              <br />
-              <br />
-              <a href="#"><ion-icon name="logo-discord"></ion-icon></a><br />
-              <br />
-              <p>
-                Desenvolvido por
-                <a href="https://github.com/Guilherme-Tarifa-Vieira"
-                  >Tarifa&copy;</a
-                >
-              </p>
-            </div>
-          </div>
+        <div class="swiper-slide">
+          <img src="img/mari.png" />
         </div>
-      </section>
+        <div class="swiper-slide">
+          <img src="img/grandMob.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/grand.webp" />
+
+        </div>
+        <div class="swiper-slide">
+          <img src="img/loveChase.png" />
+        </div>
+
+
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
     </div>
 
-    <script>
-      window.addEventListener('scroll', function () {
-        const header = document.querySelector('header')
-        header.classList.toggle('sticky', window.scrollY > 0)
-      })
+  </section>
 
-      const navigation = document.querySelector('nav')
-      document.querySelector('.toggle').onclick = function () {
-        this.classList.toggle('active')
-        navigation.classList.toggle('active')
-      }
-    </script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
+  <section>
+    <div class="content">
+      <div class="content-man">
+        <h1>
+          <span>A</span> nossa Ascenção
+        </h1>
+        <h2>
+          <span>B</span>oas vindas aos novos membros, a Bankai foi finalizada em 2012 com o intuito de reunir os
+          melhores e
+          mais
+          habilidosos players do país em um único lugar para o competitivo, e além de cooperar entre si para obtermos
+          itens raros e/ou exclusivos dando assim todo um diferencial pra equipe.
+        </h2>
+        <p><span>E</span> nós conseguimos isso, por um bom tempo nos tornamos a guilda n1 do
+          servidor brasileiro, participamos e vencemos de diversos GvG's, e assim nos tornamos temidos de serem
+          enfrentados, um simples desafio muitas vezes eram recusados por parte de outras guildas, e tudo isso é motivo
+          de orgulho pra nós, mas não só isso, realmente nos tornamos grandes amigos e uma grande família, tivemos
+          momentos maravilhosos, e muitos até hoje ainda estão reunidos, ainda que inativos no Game.
+        </p>
+        <p> Agora com o Grande Chase Classic queremos trazer de volta, reascender a
+          chama dessa grande história e torná-la ainda maior, mais forte, mais ardente. Por enquanto a guilda está
+          focada somente para o PVE, mas em breve esperamos dominar todo o servidor novamente. E aí, está preparado pra
+          fazer parte dessa nova era?</p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+  <section>
+
+    <div class="time">
+      <h2>Nosso time </h2>
+      <p><span>(Passe o mouse em cima dos cartões)</span></p>
+      <div class="card">
+        <div class="conteudo">
+          <h2><span>S</span>ellion</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum
+          </p>
+          <a href="#">SonetoMagico#7578</a>
+        </div>
+        <img src="img/articleRonan.png" />
+      </div>
+      <div class="segundo">
+        <div class="card">
+          <div class="conteudo" id="segundo">
+            <h2><span>K</span>ingOfHell</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum
+            </p>
+            <a href="#">Tarifa#0625</a>
+          </div>
+          <img src="img/bgDisc-removebg-preview.png" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="rodape">
+    <div class="contato">
+      <div class="card">
+        <div class="conteudo">
+          <h2><span>E</span>ntre no Discord!</h2>
+          <br />
+          <br />
+          <p>Clique no ícone e acesse nosso servidor, agora mesmo!</p>
+          <br />
+          <br />
+          <a href="https://discord.com/invite/X4Hx2N8U2X">
+            <ion-icon name="logo-discord"></ion-icon>
+          </a><br />
+          <br />
+          <p>
+            Desenvolvido por
+            <a href="https://github.com/Guilherme-Tarifa-Vieira">Tarifa&copy;</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <script>
+    window.addEventListener('scroll', function () {
+      const header = document.querySelector('header')
+      header.classList.toggle('sticky', window.scrollY > 0)
+    })
+
+    const navigation = document.querySelector('nav')
+    document.querySelector('.toggle').onclick = function () {
+      this.classList.toggle('active')
+      navigation.classList.toggle('active')
+    }
+  </script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: 'parallax',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "2",
+
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      loop: true,
+      autoplay: {
+        delay: 1500,
+        disableOnInteraction: false
+      },
+    });
+
+  </script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+
 </html>
