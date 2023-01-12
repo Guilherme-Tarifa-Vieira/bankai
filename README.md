@@ -1,4 +1,4 @@
 # bankai
 LandPage-GC</br>
 </br>
-https://guilherme-tarifa-vieira.github.io/bankai/
+http://bankai-grand-chase.com.br/
